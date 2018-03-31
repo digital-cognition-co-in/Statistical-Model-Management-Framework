@@ -120,10 +120,6 @@ dhankar@dhankar-VPCEB44EN:~$ source activate tensor
 
 #### FART ---- gRPC
 
-If Python could not import the module virtualenvwrapper.hook_loader,
-check that virtualenvwrapper has been installed for
-VIRTUALENVWRAPPER_PYTHON=/home/dhankar/anaconda2/bin/python and that PATH is
-set properly.
 dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ git init
 dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ _Initial/.git/
 dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ git clone -b v1.10.x https://github.com/grpc/grpc
