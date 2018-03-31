@@ -147,6 +147,154 @@ dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/Tens
 dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ 
 dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ 
 #
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ cd examples/python/route_guide
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/route_guide$ 
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/route_guide$ ls
+README.md              route_guide_db.json      route_guide_pb2.py        route_guide_server.py
+route_guide_client.py  route_guide_pb2_grpc.py  route_guide_resources.py  run_codegen.py
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/route_guide$ ## Source -- https://grpc.io/docs/quickstart/python.html
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/route_guide$ 
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/route_guide$ python -m pip install grpcio
+Collecting grpcio
+  Downloading grpcio-1.10.0-cp27-cp27mu-manylinux1_x86_64.whl (7.4MB)
+    100% |████████████████████████████████| 7.4MB 94kB/s 
+Requirement already satisfied: futures>=2.2.0 in /home/dhankar/anaconda2/lib/python2.7/site-packages (from grpcio)
+Collecting protobuf>=3.5.0.post1 (from grpcio)
+  Downloading protobuf-3.5.2.post1-cp27-cp27mu-manylinux1_x86_64.whl (6.4MB)
+    100% |████████████████████████████████| 6.4MB 122kB/s 
+Requirement already satisfied: enum34>=1.0.4 in /home/dhankar/anaconda2/lib/python2.7/site-packages (from grpcio)
+Requirement already satisfied: six>=1.5.2 in /home/dhankar/anaconda2/lib/python2.7/site-packages (from grpcio)
+Requirement already satisfied: setuptools in /home/dhankar/anaconda2/lib/python2.7/site-packages/setuptools-27.2.0-py2.7.egg (from protobuf>=3.5.0.post1->grpcio)
+Installing collected packages: protobuf, grpcio
+Successfully installed grpcio-1.10.0 protobuf-3.5.2.post1
+You are using pip version 9.0.1, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/route_guide$ 
+#
+/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/route_guide$ python -m pip install grpcio-tools
+Collecting grpcio-tools
+  Downloading grpcio_tools-1.10.0-cp36-cp36m-manylinux1_x86_64.whl (22.2MB)
+    100% |████████████████████████████████| 22.2MB 14kB/s 
+Requirement already satisfied: grpcio>=1.10.0 in /home/dhankar/anaconda2/envs/tensor/lib/python3.6/site-packages (from grpcio-tools)
+Requirement already satisfied: protobuf>=3.5.0.post1 in /home/dhankar/anaconda2/envs/tensor/lib/python3.6/site-packages (from grpcio-tools)
+Requirement already satisfied: six>=1.5.2 in /home/dhankar/anaconda2/envs/tensor/lib/python3.6/site-packages (from grpcio>=1.10.0->grpcio-tools)
+Requirement already satisfied: setuptools in /home/dhankar/anaconda2/envs/tensor/lib/python3.6/site-packages (from protobuf>=3.5.0.post1->grpcio-tools)
+Installing collected packages: grpcio-tools
+Successfully installed grpcio-tools-1.10.0
+You are using pip version 9.0.1, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/route_guide$ 
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ cd gRPC_Initial
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ ls
+grpc
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ cd grpc
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ ls
+AUTHORS          CODE-OF-CONDUCT.md  examples           grpc.gyp                Makefile            README.md         test
+bazel            composer.json       Gemfile            gRPC.podspec            MANIFEST.md         requirements.txt  third_party
+BUILD            config.m4           grpc.bzl           gRPC-ProtoRPC.podspec   NOTICE.txt          setup.cfg         tools
+build_config.rb  config.w32          gRPC-Core.podspec  gRPC-RxLibrary.podspec  OWNERS              setup.py          vsprojects
+build.yaml       CONTRIBUTING.md     gRPC-C++.podspec   include                 package.xml         src               WORKSPACE
+cmake            doc                 grpc.def           INSTALL.md              PYTHON-MANIFEST.in  summerofcode
+CMakeLists.txt   etc                 grpc.gemspec       LICENSE                 Rakefile            templates
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ cd examples
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples$ ls
+BUILD  cpp  csharp  node  objective-c  php  protos  python  README.md  ruby
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples$ cd protos
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/protos$ ls
+auth_sample.proto  hellostreamingworld.proto  helloworld.proto  README.md  route_guide.proto
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/protos$ gedit helloworld.proto
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/protos$ sudo gedit helloworld.proto
 
+#
+# FART ---- Initial Proto File ----
+#
+#
+// Copyright 2015 gRPC authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package helloworld;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ cd grpc
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ ls
+AUTHORS          CODE-OF-CONDUCT.md  examples           grpc.gyp                Makefile            README.md         test
+bazel            composer.json       Gemfile            gRPC.podspec            MANIFEST.md         requirements.txt  third_party
+BUILD            config.m4           grpc.bzl           gRPC-ProtoRPC.podspec   NOTICE.txt          setup.cfg         tools
+build_config.rb  config.w32          gRPC-Core.podspec  gRPC-RxLibrary.podspec  OWNERS              setup.py          vsprojects
+build.yaml       CONTRIBUTING.md     gRPC-C++.podspec   include                 package.xml         src               WORKSPACE
+cmake            doc                 grpc.def           INSTALL.md              PYTHON-MANIFEST.in  summerofcode
+CMakeLists.txt   etc                 grpc.gemspec       LICENSE                 Rakefile            templates
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ cd examples
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples$ ls
+BUILD  cpp  csharp  node  objective-c  php  protos  python  README.md  ruby
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples$ cd protos
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/protos$ ls
+auth_sample.proto  hellostreamingworld.proto  helloworld.proto  README.md  route_guide.proto
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/protos$ gedit helloworld.proto
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/protos$ sudo gedit helloworld.proto
+[sudo] password for dhankar: 
+
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/protos$ cd ..
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples$ ls
+BUILD  cpp  csharp  node  objective-c  php  protos  python  README.md  ruby
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples$ cd python
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python$ ls
+helloworld  interceptors  multiplex  README.md  route_guide
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python$ cd helloworld
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/helloworld$ ls
+greeter_client.py  greeter_server.py  helloworld_pb2_grpc.py  helloworld_pb2.py  __pycache__  README.md
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/helloworld$ python greeter_client.py
+Greeter client received: Hello, you!
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/helloworld$ python greeter_client.py
+Greeter client received: Hello, you!
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/helloworld$ python greeter_client.py
+Greeter client received: THIS IS THE REPLY TO THE HELLO --- Hello, you!
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc/examples/python/helloworld$ python greeter_client.py
+Greeter client received: THIS IS THE REPLY TO THE HELLO --- Hello, you!
+Greeter client received -- 2nd MESSAGE : Hello again mate ...., you!
+#
+#
+#
 
 
