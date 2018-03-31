@@ -1,3 +1,11 @@
+### Installation TensorFlowServing with Python 3.6 === https://pypi.python.org/pypi/tensorflow-serving-api/1.6.0
+# got the "tensorflow_serving_api-1.6.0-py2-none-any.whl" --- unpacked Two DIR's --- copied both DIR's at below location ...
+# My Local DIR for Serving == /home/dhankar/anaconda2/envs/tensor/lib/python3.6/site-packages/tensorflow_serving
+# This above may not work -- may have to Install Binaries with BAZEL :P 
+#
+
+
+
 dhankar@dhankar-VPCEB44EN:~$ conda info -h
 usage: conda info [-h] [--json] [--debug] [--verbose] [--offline] [-a] [-e]
                   [-l] [-s] [--root] [--unsafe-channels]
@@ -295,6 +303,568 @@ Greeter client received: THIS IS THE REPLY TO THE HELLO --- Hello, you!
 Greeter client received -- 2nd MESSAGE : Hello again mate ...., you!
 #
 #
+# FART ---- Bazel Install 
 #
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ 
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ sudo apt-get update && sudo apt-get install -y \
+>         build-essential \
+>         curl \
+>         libcurl3-dev \
+>         git \
+>         libfreetype6-dev \
+>         libpng12-dev \
+>         libzmq3-dev \
+>         pkg-config \
+>         python-dev \
+>         python-numpy \
+>         python-pip \
+>         software-properties-common \
+>         swig \
+>         zip \
+>         zlib1g-dev
+[sudo] password for dhankar: 
+Ign:1 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial InRelease
+Ign:2 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial Release                                     
+Ign:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages                                                
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages                                                 
+Ign:5 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main all Packages                                                  
+Ign:6 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en_IN                                             
+Ign:7 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en                                                
+Ign:8 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 DEP-11 Metadata                                         
+Ign:9 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main DEP-11 64x64 Icons                                            
+Ign:10 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 Packages                                         
+Ign:11 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted i386 Packages                                          
+Ign:12 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted all Packages                                           
+Ign:13 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en_IN                                      
+Ign:14 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en                                         
+Ign:15 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 DEP-11 Metadata                                  
+Ign:16 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted DEP-11 64x64 Icons                                     
+Ign:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages                                                
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages                                                 
+Ign:5 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main all Packages                                                  
+Ign:6 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en_IN                                             
+Ign:7 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en                                                
+Ign:8 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 DEP-11 Metadata                                         
+Ign:9 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main DEP-11 64x64 Icons                                            
+Ign:10 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 Packages                                         
+Ign:11 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted i386 Packages                                          
+Ign:12 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted all Packages                                           
+Ign:13 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en_IN                                      
+Ign:14 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en                                         
+Ign:15 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 DEP-11 Metadata                                  
+Ign:16 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted DEP-11 64x64 Icons                                     
+Ign:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages                                                
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages                                                 
+Ign:5 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main all Packages                                                  
+Ign:6 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en_IN                                             
+Ign:7 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en                                                
+Ign:8 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 DEP-11 Metadata                                         
+Ign:9 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main DEP-11 64x64 Icons                                            
+Ign:10 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 Packages                                         
+Ign:11 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted i386 Packages                                          
+Ign:12 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted all Packages                                           
+Ign:13 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en_IN                                      
+Ign:14 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en                                         
+Ign:15 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 DEP-11 Metadata                                  
+Ign:16 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted DEP-11 64x64 Icons                                     
+Ign:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages                                                
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages                                                 
+Ign:5 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main all Packages                                                  
+Ign:6 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en_IN                                             
+Ign:7 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en                                                
+Ign:8 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 DEP-11 Metadata                                         
+Ign:9 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main DEP-11 64x64 Icons                                            
+Ign:10 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 Packages                                         
+Ign:11 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted i386 Packages                                          
+Ign:12 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted all Packages                                           
+Ign:13 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en_IN                                      
+Ign:14 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en                                         
+Ign:15 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 DEP-11 Metadata                                  
+Ign:16 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted DEP-11 64x64 Icons                                     
+Ign:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages                                                
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages                                                 
+Ign:5 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main all Packages                                                  
+Ign:6 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en_IN                                             
+Ign:7 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en                                                
+Ign:8 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 DEP-11 Metadata                                         
+Ign:9 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main DEP-11 64x64 Icons                                            
+Ign:10 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 Packages                                         
+Ign:11 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted i386 Packages                                          
+Ign:12 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted all Packages                                           
+Ign:13 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en_IN                                      
+Ign:14 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en                                         
+Ign:15 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 DEP-11 Metadata                                  
+Ign:16 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted DEP-11 64x64 Icons                                     
+Err:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages                                                
+  Please use apt-cdrom to make this CD-ROM recognized by APT. apt-get update cannot be used to add new CD-ROMs
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages                                                 
+Hit:17 http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial InRelease                                                                                
+Hit:18 http://archive.canonical.com/ubuntu xenial InRelease                                                                                          
+Hit:19 http://qgis.org/debian xenial InRelease                                                                                                       
+Ign:20 http://dl.google.com/linux/chrome/deb stable InRelease                                                                                        
+Hit:21 http://archive.ubuntu.com/ubuntu xenial InRelease                                                                                             
+Hit:22 http://ppa.launchpad.net/webupd8team/java/ubuntu xenial InRelease                                                                             
+Get:23 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]                                                                            
+Ign:24 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0 InRelease                                                                           
+Hit:25 http://apt.postgresql.org/pub/repos/apt xenial-pgdg InRelease                                                                         
+Ign:26 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 InRelease                                  
+Ign:27 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0 Release              
+Get:28 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release [3,457 B]                         
+Ign:29 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages                             
+Ign:30 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages
+Ign:31 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages                    
+Hit:32 http://dl.google.com/linux/chrome/deb stable Release                                                 
+Hit:33 https://repo.skype.com/deb stable InRelease                                              
+Get:34 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+Ign:35 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN
+Ign:36 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en
+Hit:37 https://cli-assets.heroku.com/branches/stable/apt ./ InRelease                 
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata
+Hit:39 https://download.docker.com/linux/ubuntu xenial InRelease                     
+Get:40 https://cran.rstudio.com/bin/linux/ubuntu xenial/ InRelease [3,590 B]         
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons                           
+Get:42 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release.gpg [801 B] 
+Ign:29 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages
+Ign:30 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages
+Ign:31 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages
+Get:44 http://archive.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+Ign:35 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN
+Ign:36 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons
+Ign:29 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages
+Ign:30 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages
+Ign:31 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages
+Get:46 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [744 kB]
+Ign:47 https://artifacts.elastic.co/packages/5.x/apt stable InRelease               
+Err:42 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release.gpg          
+  The following signatures were invalid: KEYEXPIRED 1515625755
+Hit:48 https://artifacts.elastic.co/packages/5.x/apt stable Release                   
+Ign:35 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN
+Ign:36 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en
+Err:45 https://deb.opera.com/opera-stable stable InRelease    
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY D615560BA5C7FF72
+Get:49 http://archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages [690 kB]
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons
+Ign:29 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages
+Ign:30 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages
+Get:50 https://artifacts.elastic.co/packages/5.x/apt stable Release.gpg [473 B]
+Ign:31 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages                          
+Get:51 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 DEP-11 Metadata [317 kB]                    
+Ign:50 https://artifacts.elastic.co/packages/5.x/apt stable Release.gpg                                               
+Get:52 http://archive.ubuntu.com/ubuntu xenial-updates/main DEP-11 64x64 Icons [231 kB]                               
+Get:53 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [615 kB]
+Get:54 http://archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages [570 kB]  
+Hit:55 https://cran.csiro.au/bin/linux/ubuntu xenial/ InRelease                         
+Get:56 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 DEP-11 Metadata [241 kB]               
+Ign:35 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN                       
+Ign:36 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons
+Ign:29 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages
+Ign:30 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages
+Ign:31 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages
+Get:57 http://archive.ubuntu.com/ubuntu xenial-updates/universe DEP-11 64x64 Icons [321 kB]
+Get:58 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 DEP-11 Metadata [5,972 B]
+Get:59 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 DEP-11 Metadata [3,328 B]       
+Get:60 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 DEP-11 Metadata [5,088 B]   
+Get:61 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 DEP-11 Metadata [67.4 kB]        
+Get:62 http://archive.ubuntu.com/ubuntu xenial-security/main DEP-11 64x64 Icons [77.2 kB]          
+Get:63 http://archive.ubuntu.com/ubuntu xenial-security/universe amd64 DEP-11 Metadata [107 kB]
+Get:64 http://archive.ubuntu.com/ubuntu xenial-security/universe DEP-11 64x64 Icons [139 kB]      
+Ign:35 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN
+Ign:36 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons
+Err:29 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages
+  404  Not Found
+Ign:30 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages
+Ign:31 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages
+Ign:35 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN
+Ign:36 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons
+Fetched 4,447 kB in 5s (816 kB/s)
+AppStream cache update completed, but some metadata was ignored due to errors.
+Reading package lists... Done
+W: The repository 'cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: The repository 'http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0 Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release: The following signatures were invalid: KEYEXPIRED 1515625755
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://deb.opera.com/opera-stable stable InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY D615560BA5C7FF72
+W: GPG error: https://artifacts.elastic.co/packages/5.x/apt stable Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY D27D666CD88E42B4
+W: The repository 'https://artifacts.elastic.co/packages/5.x/apt stable Release' is not signed.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: Failed to fetch https://deb.opera.com/opera-stable/dists/stable/InRelease  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY D615560BA5C7FF72
+E: Failed to fetch cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719)/dists/xenial/main/binary-amd64/Packages  Please use apt-cdrom to make this CD-ROM recognized by APT. apt-get update cannot be used to add new CD-ROMs
+E: Failed to fetch http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/3.0/multiverse/binary-amd64/Packages  404  Not Found
+W: Failed to fetch http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/3.4/Release.gpg  The following signatures were invalid: KEYEXPIRED 1515625755
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ 
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ pip install tensorflow-serving-api
+Collecting tensorflow-serving-api
+  Could not find a version that satisfies the requirement tensorflow-serving-api (from versions: )
+No matching distribution found for tensorflow-serving-api
+You are using pip version 9.0.1, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ ls
+a1_Logs_TensorFlowServing.txt  gRPC_Initial  README.md
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ sudo apt-get install openjdk-8-jdk
+[sudo] password for dhankar: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libxt-dev openjdk-8-jdk-headless
+Suggested packages:
+  libxt-doc openjdk-8-demo openjdk-8-source visualvm
+The following NEW packages will be installed:
+  libxt-dev openjdk-8-jdk openjdk-8-jdk-headless
+0 upgraded, 3 newly installed, 0 to remove and 374 not upgraded.
+Need to get 9,043 kB of archives.
+After this operation, 41.1 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxt-dev amd64 1:1.1.5-0ubuntu1 [394 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openjdk-8-jdk-headless amd64 8u151-b12-0ubuntu0.16.04.2 [8,198 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openjdk-8-jdk amd64 8u151-b12-0ubuntu0.16.04.2 [451 kB]
+Fetched 9,043 kB in 4s (1,855 kB/s)     
+Selecting previously unselected package libxt-dev:amd64.
+(Reading database ... 431159 files and directories currently installed.)
+Preparing to unpack .../libxt-dev_1%3a1.1.5-0ubuntu1_amd64.deb ...
+Unpacking libxt-dev:amd64 (1:1.1.5-0ubuntu1) ...
+Selecting previously unselected package openjdk-8-jdk-headless:amd64.
+Preparing to unpack .../openjdk-8-jdk-headless_8u151-b12-0ubuntu0.16.04.2_amd64.deb ...
+Unpacking openjdk-8-jdk-headless:amd64 (8u151-b12-0ubuntu0.16.04.2) ...
+Selecting previously unselected package openjdk-8-jdk:amd64.
+Preparing to unpack .../openjdk-8-jdk_8u151-b12-0ubuntu0.16.04.2_amd64.deb ...
+Unpacking openjdk-8-jdk:amd64 (8u151-b12-0ubuntu0.16.04.2) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libxt-dev:amd64 (1:1.1.5-0ubuntu1) ...
+Setting up openjdk-8-jdk-headless:amd64 (8u151-b12-0ubuntu0.16.04.2) ...
+Setting up openjdk-8-jdk:amd64 (8u151-b12-0ubuntu0.16.04.2) ...
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ 
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  3157  100  3157    0     0   4606      0 --:--:-- --:--:-- --:--:--  8094
+OK
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ 
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ sudo apt-get update && sudo apt-get install bazel
+Ign:1 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial InRelease
+Ign:2 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial Release
+Ign:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages
+Ign:5 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main all Packages
+Ign:6 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en_IN
+Ign:7 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en
+Ign:8 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 DEP-11 Metadata
+Ign:9 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main DEP-11 64x64 Icons
+Ign:10 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 Packages
+Ign:11 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted i386 Packages
+Ign:12 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted all Packages
+Ign:13 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en_IN
+Ign:14 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en
+Ign:15 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 DEP-11 Metadata
+Ign:16 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted DEP-11 64x64 Icons
+Ign:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages
+Ign:5 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main all Packages
+Ign:6 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en_IN
+Ign:7 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en
+Ign:8 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 DEP-11 Metadata
+Ign:9 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main DEP-11 64x64 Icons
+Ign:10 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 Packages
+Ign:11 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted i386 Packages
+Ign:12 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted all Packages
+Ign:13 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en_IN
+Ign:14 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en
+Ign:15 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 DEP-11 Metadata
+Ign:16 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted DEP-11 64x64 Icons
+Ign:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages
+Ign:5 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main all Packages
+Ign:6 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en_IN
+Ign:7 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en
+Ign:8 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 DEP-11 Metadata
+Ign:9 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main DEP-11 64x64 Icons
+Ign:10 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 Packages
+Ign:11 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted i386 Packages
+Ign:12 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted all Packages
+Ign:13 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en_IN
+Ign:14 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en
+Ign:15 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 DEP-11 Metadata
+Ign:16 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted DEP-11 64x64 Icons
+Ign:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages
+Ign:5 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main all Packages
+Ign:6 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en_IN
+Ign:7 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en
+Ign:8 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 DEP-11 Metadata
+Ign:9 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main DEP-11 64x64 Icons
+Ign:10 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 Packages
+Ign:11 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted i386 Packages
+Ign:12 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted all Packages
+Ign:13 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en_IN
+Ign:14 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en
+Ign:15 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 DEP-11 Metadata
+Ign:16 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted DEP-11 64x64 Icons
+Ign:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages
+Ign:5 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main all Packages
+Ign:6 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en_IN
+Ign:7 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main Translation-en
+Ign:8 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 DEP-11 Metadata
+Ign:9 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main DEP-11 64x64 Icons
+Ign:10 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 Packages
+Ign:11 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted i386 Packages
+Ign:12 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted all Packages
+Ign:13 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en_IN
+Ign:14 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted Translation-en
+Ign:15 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted amd64 DEP-11 Metadata
+Ign:16 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/restricted DEP-11 64x64 Icons
+Err:3 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main amd64 Packages
+  Please use apt-cdrom to make this CD-ROM recognized by APT. apt-get update cannot be used to add new CD-ROMs
+Ign:4 cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial/main i386 Packages
+Ign:17 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:18 http://archive.ubuntu.com/ubuntu xenial InRelease                                                                                             
+Hit:19 http://archive.canonical.com/ubuntu xenial InRelease                                                                                          
+Ign:20 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0 InRelease                                                                           
+Hit:21 http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial InRelease                                                                                
+Hit:22 http://qgis.org/debian xenial InRelease                                                                                                       
+Ign:23 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 InRelease                                                                           
+Ign:24 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0 Release                                                                             
+Hit:25 http://archive.ubuntu.com/ubuntu xenial-updates InRelease                                                                                     
+Hit:26 http://archive.ubuntu.com/ubuntu xenial-backports InRelease                                                                                   
+Hit:27 http://ppa.launchpad.net/webupd8team/java/ubuntu xenial InRelease                                                                             
+Hit:28 http://archive.ubuntu.com/ubuntu xenial-security InRelease                                                                                    
+Get:29 http://storage.googleapis.com/bazel-apt stable InRelease [2,464 B]                                                                            
+Get:30 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release [3,457 B]                                                                   
+Hit:31 http://dl.google.com/linux/chrome/deb stable Release                                                                               
+Ign:32 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages              
+Hit:33 https://repo.skype.com/deb stable InRelease                                
+Hit:34 https://cran.rstudio.com/bin/linux/ubuntu xenial/ InRelease       
+Hit:35 https://cli-assets.heroku.com/branches/stable/apt ./ InRelease    
+Hit:36 https://download.docker.com/linux/ubuntu xenial InRelease         
+Hit:37 http://apt.postgresql.org/pub/repos/apt xenial-pgdg InRelease     
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages
+Ign:39 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN
+Ign:42 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en
+Ign:43 https://artifacts.elastic.co/packages/5.x/apt stable InRelease
+Ign:44 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata
+Get:46 https://artifacts.elastic.co/packages/5.x/apt stable Release [4,360 B]
+Ign:47 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons              
+Get:48 http://storage.googleapis.com/bazel-apt stable/jdk1.8 amd64 Packages [601 B]
+Get:49 https://artifacts.elastic.co/packages/5.x/apt stable Release.gpg [473 B]    
+Get:50 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release.gpg [801 B]  
+Hit:51 https://cran.csiro.au/bin/linux/ubuntu xenial/ InRelease 
+Ign:32 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages
+Err:40 https://deb.opera.com/opera-stable stable InRelease
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY D615560BA5C7FF72
+Ign:49 https://artifacts.elastic.co/packages/5.x/apt stable Release.gpg
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages
+Err:50 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release.gpg
+  The following signatures were invalid: KEYEXPIRED 1515625755
+Ign:39 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN
+Ign:42 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en
+Ign:44 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata
+Hit:52 https://artifacts.elastic.co/packages/5.x/apt stable/main amd64 Packages
+Ign:52 https://artifacts.elastic.co/packages/5.x/apt stable/main amd64 Packages
+Hit:53 https://artifacts.elastic.co/packages/5.x/apt stable/main i386 Packages
+Ign:53 https://artifacts.elastic.co/packages/5.x/apt stable/main i386 Packages
+Ign:47 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons
+Ign:32 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages
+Hit:52 https://artifacts.elastic.co/packages/5.x/apt stable/main amd64 Packages
+Hit:53 https://artifacts.elastic.co/packages/5.x/apt stable/main i386 Packages
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages
+Ign:39 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN
+Ign:42 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en
+Ign:44 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata
+Ign:47 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons
+Ign:32 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages                                                           
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages                                                            
+Ign:39 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages                                                             
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN                                                        
+Ign:42 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en                                                           
+Ign:44 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata                                                    
+Ign:47 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons                                                       
+Ign:32 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages                                                           
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages                                                            
+Ign:39 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages                                                             
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN                                                        
+Ign:42 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en                                                           
+Ign:44 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata                                                    
+Ign:47 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons                                                       
+Err:32 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 Packages                                                           
+  404  Not Found
+Ign:38 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse i386 Packages                                                            
+Ign:39 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse all Packages                                                             
+Ign:41 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en_IN                                                        
+Ign:42 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse Translation-en                                                           
+Ign:44 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse amd64 DEP-11 Metadata                                                    
+Ign:47 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0/multiverse DEP-11 64x64 Icons                                                       
+Fetched 12.2 kB in 10s (1,210 B/s)                                                                                                                   
+Reading package lists... Done
+W: The repository 'cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719) xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: The repository 'http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0 Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://deb.opera.com/opera-stable stable InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY D615560BA5C7FF72
+W: GPG error: https://artifacts.elastic.co/packages/5.x/apt stable Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY D27D666CD88E42B4
+W: The repository 'https://artifacts.elastic.co/packages/5.x/apt stable Release' is not signed.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release: The following signatures were invalid: KEYEXPIRED 1515625755
+W: Failed to fetch https://deb.opera.com/opera-stable/dists/stable/InRelease  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY D615560BA5C7FF72
+E: Failed to fetch cdrom://Ubuntu 16.04.1 LTS _Xenial Xerus_ - Release amd64 (20160719)/dists/xenial/main/binary-amd64/Packages  Please use apt-cdrom to make this CD-ROM recognized by APT. apt-get update cannot be used to add new CD-ROMs
+E: Failed to fetch http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/3.0/multiverse/binary-amd64/Packages  404  Not Found
+W: Failed to fetch http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/3.4/Release.gpg  The following signatures were invalid: KEYEXPIRED 1515625755
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ 
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ sudo apt-get install bazel
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  bazel
+0 upgraded, 1 newly installed, 0 to remove and 374 not upgraded.
+Need to get 88.2 MB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://storage.googleapis.com/bazel-apt stable/jdk1.8 amd64 bazel amd64 0.11.1 [88.2 MB]
+Fetched 88.2 MB in 43s (2,037 kB/s)                                                                                                                  
+Selecting previously unselected package bazel.
+(Reading database ... 431586 files and directories currently installed.)
+Preparing to unpack .../bazel_0.11.1_amd64.deb ...
+Unpacking bazel (0.11.1) ...
+Setting up bazel (0.11.1) ...
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ 
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ ## FART --- bazel is already the newest version (0.11.1).
 
+#
+#
+#
+FART MAIN ---- 
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ ls
+a1_Logs_TensorFlowServing.txt  cnn_mnist.py  gRPC_Initial  mnist_saved_model.py  README.md
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ python mnist_saved_model.py
+Usage: mnist_export.py [--training_iteration=x] [--model_version=y] export_dir
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ python mnist_saved_model.py --50 --1 /media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR
+Training model...
+Successfully downloaded train-images-idx3-ubyte.gz 9912422 bytes.
+Extracting /tmp/train-images-idx3-ubyte.gz
+Successfully downloaded train-labels-idx1-ubyte.gz 28881 bytes.
+Extracting /tmp/train-labels-idx1-ubyte.gz
+Successfully downloaded t10k-images-idx3-ubyte.gz 1648877 bytes.
+Extracting /tmp/t10k-images-idx3-ubyte.gz
+Successfully downloaded t10k-labels-idx1-ubyte.gz 4542 bytes.
+Extracting /tmp/t10k-labels-idx1-ubyte.gz
+2018-03-31 21:27:56.192346: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+Traceback (most recent call last):
+  File "mnist_saved_model.py", line 147, in <module>
+    tf.app.run()
+  File "/home/dhankar/anaconda2/envs/tensor/lib/python3.6/site-packages/tensorflow/python/platform/app.py", line 124, in run
+    _sys.exit(main(argv))
+  File "mnist_saved_model.py", line 75, in main
+    tf.constant([str(i) for i in xrange(10)]))
+NameError: name 'xrange' is not defined
+###
+# FART --- https://github.com/tensorflow/tensorflow/issues/14725
+# xrange() is Python 2 --- changed it to range() for Python 3.6 
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ python mnist_saved_model.py --50 --1 /media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR
+Training model...
+Extracting /tmp/train-images-idx3-ubyte.gz
+Extracting /tmp/train-labels-idx1-ubyte.gz
+Extracting /tmp/t10k-images-idx3-ubyte.gz
+Extracting /tmp/t10k-labels-idx1-ubyte.gz
+2018-03-31 21:35:56.632600: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+training accuracy 0.9092
+Done training!
+Exporting trained model to b'/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR/1'
+Done exporting!
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ python mnist_saved_model.py --500 --2 /media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR
+Training model...
+Extracting /tmp/train-images-idx3-ubyte.gz
+Extracting /tmp/train-labels-idx1-ubyte.gz
+Extracting /tmp/t10k-images-idx3-ubyte.gz
+Extracting /tmp/t10k-labels-idx1-ubyte.gz
+2018-03-31 21:36:37.620086: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+training accuracy 0.9092
+Done training!
+Exporting trained model to b'/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR/1'
+Traceback (most recent call last):
+  File "mnist_saved_model.py", line 148, in <module>
+    tf.app.run()
+  File "/home/dhankar/anaconda2/envs/tensor/lib/python3.6/site-packages/tensorflow/python/platform/app.py", line 124, in run
+    _sys.exit(main(argv))
+  File "mnist_saved_model.py", line 99, in main
+    builder = tf.saved_model.builder.SavedModelBuilder(export_path)
+  File "/home/dhankar/anaconda2/envs/tensor/lib/python3.6/site-packages/tensorflow/python/saved_model/builder_impl.py", line 88, in __init__
+    "directory: %s" % export_dir)
+AssertionError: Export directory already exists. Please specify a different export directory: b'/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR/1'
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ python mnist_saved_model.py --500 --2 /media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_2
+Training model...
+Extracting /tmp/train-images-idx3-ubyte.gz
+Extracting /tmp/train-labels-idx1-ubyte.gz
+Extracting /tmp/t10k-images-idx3-ubyte.gz
+Extracting /tmp/t10k-labels-idx1-ubyte.gz
+2018-03-31 21:37:32.736392: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+training accuracy 0.9092
+Done training!
+Exporting trained model to b'/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_2/1'
+Done exporting!
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ python mnist_saved_model.py --5000 --3 /media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_3
+Training model...
+Extracting /tmp/train-images-idx3-ubyte.gz
+Extracting /tmp/train-labels-idx1-ubyte.gz
+Extracting /tmp/t10k-images-idx3-ubyte.gz
+Extracting /tmp/t10k-labels-idx1-ubyte.gz
+2018-03-31 21:38:02.666252: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+training accuracy 0.9092
+Done training!
+Exporting trained model to b'/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_3/1'
+Done exporting!
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ ls
+a1_Logs_TensorFlowServing.txt  mnist_input_data.py   MODEL_Mnist_Expo_DIR_2  README.md                  train-images-idx3-ubyte.gz
+cnn_mnist.py                   mnist_saved_model.py  MODEL_Mnist_Expo_DIR_3  t10k-images-idx3-ubyte.gz  train-labels-idx1-ubyte.gz
+gRPC_Initial                   MODEL_Mnist_Expo_DIR  __pycache__             t10k-labels-idx1-ubyte.gz
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ 
+#
+#
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ 
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ cd MODEL_Mnist_Expo_DIR_3
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_3$ ls
+1
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_3$ cd 1
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_3/1$ ls
+saved_model.pb  variables
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_3/1$ cd variables
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_3/1/variables$ ls
+variables.data-00000-of-00001  variables.index
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_3/1/variables$ 
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/MODEL_Mnist_Expo_DIR_3/1/variables$ 
+#
+#
 
