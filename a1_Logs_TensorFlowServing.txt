@@ -1,0 +1,156 @@
+dhankar@dhankar-VPCEB44EN:~$ conda info -h
+usage: conda info [-h] [--json] [--debug] [--verbose] [--offline] [-a] [-e]
+                  [-l] [-s] [--root] [--unsafe-channels]
+                  [packages [packages ...]]
+
+Display information about current conda install.
+
+Options:
+
+positional arguments:
+  packages           Display information about packages.
+
+optional arguments:
+  -h, --help         Show this help message and exit.
+  --json             Report all output as json. Suitable for using conda
+                     programmatically.
+  --debug            Show debug output.
+  --verbose, -v      Use once for info, twice for debug, three times for
+                     trace.
+  --offline          Offline mode, don't connect to the Internet.
+  -a, --all          Show all information, (environments, license, and system
+                     information.
+  -e, --envs         List all known conda environments.
+  -l, --license      Display information about the local conda licenses list.
+  -s, --system       List environment variables.
+  --root             Display root environment path.
+  --unsafe-channels  Display list of channels with tokens exposed.
+
+Examples:
+
+    conda info -a
+
+
+dhankar@dhankar-VPCEB44EN:~$ conda info -a
+Current conda install:
+
+               platform : linux-64
+          conda version : 4.3.25
+       conda is private : False
+      conda-env version : 4.3.25
+    conda-build version : 2.0.2
+         python version : 2.7.12.final.0
+       requests version : 2.14.2
+       root environment : /home/dhankar/anaconda2  (writable)
+    default environment : /home/dhankar/anaconda2
+       envs directories : /home/dhankar/anaconda2/envs
+                          /home/dhankar/.conda/envs
+          package cache : /home/dhankar/anaconda2/pkgs
+                          /home/dhankar/.conda/pkgs
+           channel URLs : https://repo.continuum.io/pkgs/free/linux-64
+                          https://repo.continuum.io/pkgs/free/noarch
+                          https://repo.continuum.io/pkgs/r/linux-64
+                          https://repo.continuum.io/pkgs/r/noarch
+                          https://repo.continuum.io/pkgs/pro/linux-64
+                          https://repo.continuum.io/pkgs/pro/noarch
+            config file : None
+             netrc file : /home/dhankar/.netrc
+           offline mode : False
+             user-agent : conda/4.3.25 requests/2.14.2 CPython/2.7.12 Linux/4.4.0-116-generic debian/stretch/sid glibc/2.23    
+                UID:GID : 1000:1000
+# conda environments:
+#
+Venv1                    /home/dhankar/anaconda2/envs/Venv1
+dc_info_venv             /home/dhankar/anaconda2/envs/dc_info_venv
+django_excel_venv        /home/dhankar/anaconda2/envs/django_excel_venv
+dlib_opencv              /home/dhankar/anaconda2/envs/dlib_opencv
+elastic_venv             /home/dhankar/anaconda2/envs/elastic_venv
+elastic_venv_py35        /home/dhankar/anaconda2/envs/elastic_venv_py35
+elastic_venv_py352       /home/dhankar/anaconda2/envs/elastic_venv_py352
+gisenv                   /home/dhankar/anaconda2/envs/gisenv
+hack                     /home/dhankar/anaconda2/envs/hack
+ipykernel_py34           /home/dhankar/anaconda2/envs/ipykernel_py34
+opencv1_py3              /home/dhankar/anaconda2/envs/opencv1_py3
+pdfparsing               /home/dhankar/anaconda2/envs/pdfparsing
+py27                     /home/dhankar/anaconda2/envs/py27
+py27infHo                /home/dhankar/anaconda2/envs/py27infHo
+py27infoBOT              /home/dhankar/anaconda2/envs/py27infoBOT
+py35                     /home/dhankar/anaconda2/envs/py35
+py35infoBOT              /home/dhankar/anaconda2/envs/py35infoBOT
+rt_ave                   /home/dhankar/anaconda2/envs/rt_ave
+tensor                   /home/dhankar/anaconda2/envs/tensor
+root                  *  /home/dhankar/anaconda2
+
+sys.version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (defaul...
+sys.prefix: /home/dhankar/anaconda2
+sys.executable: /home/dhankar/anaconda2/bin/python
+conda location: /home/dhankar/anaconda2/lib/python2.7/site-packages/conda
+conda-build: /home/dhankar/anaconda2/bin/conda-build
+conda-convert: /home/dhankar/anaconda2/bin/conda-convert
+conda-develop: /home/dhankar/anaconda2/bin/conda-develop
+conda-env: /home/dhankar/anaconda2/bin/conda-env
+conda-index: /home/dhankar/anaconda2/bin/conda-index
+conda-inspect: /home/dhankar/anaconda2/bin/conda-inspect
+conda-metapackage: /home/dhankar/anaconda2/bin/conda-metapackage
+conda-render: /home/dhankar/anaconda2/bin/conda-render
+conda-server: /home/dhankar/anaconda2/bin/conda-server
+conda-sign: /home/dhankar/anaconda2/bin/conda-sign
+conda-skeleton: /home/dhankar/anaconda2/bin/conda-skeleton
+user site dirs: ~/.local/lib/python2.7
+                ~/.local/lib/python3.5
+
+CIO_TEST: <not set>
+CONDA_DEFAULT_ENV: <not set>
+CONDA_ENVS_PATH: <not set>
+LD_LIBRARY_PATH: /home/dhankar/anaconda2/pkgs/mkl-11.3.3-0/lib/:/usr/local/lib
+PATH: /home/dhankar/Nutch1/ant//bin:/home/dhankar/spark-2.0.2-bin-hadoop2.7/bin:/home/dhankar/scala-2.12.0/bin:/home/dhankar/usr/lib/jvm/java-8-oracle//bin:/home/dhankar/anaconda2/bin:/home/dhankar/bin:/home/dhankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/java:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/dhankar/a____FB_ChatBot/a______a_SCrapingAllOWN/a_______Scrapy_All_Own/geckodriver:/home/dhankar/a____FB_ChatBot/a______a_SCrapingAllOWN/a_______Scrapy_All_Own/chromedriver:/home/dhankar/a____FB_ChatBot/a______a_SCrapingAllOWN/a_______Scrapy_All_Own/phantomjs
+PYTHONHOME: <not set>
+PYTHONPATH: /home/dhankar/.qgis2/python/plugins/SemiAutomaticClassificationPlugin
+
+License directories:
+    /home/dhankar/.continuum
+    /home/dhankar/anaconda2/licenses
+License files (license*.txt):
+Package/feature end dates:
+dhankar@dhankar-VPCEB44EN:~$ 
+dhankar@dhankar-VPCEB44EN:~$ source activate tensor
+(tensor) dhankar@dhankar-VPCEB44EN:~$ cd /media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving
+(tensor) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving$ 
+
+
+#### FART ---- gRPC
+
+If Python could not import the module virtualenvwrapper.hook_loader,
+check that virtualenvwrapper has been installed for
+VIRTUALENVWRAPPER_PYTHON=/home/dhankar/anaconda2/bin/python and that PATH is
+set properly.
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ git init
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ _Initial/.git/
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ git clone -b v1.10.x https://github.com/grpc/grpc
+Cloning into 'grpc'...
+remote: Counting objects: 368727, done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 368727 (delta 0), reused 0 (delta 0), pack-reused 368716
+Receiving objects: 100% (368727/368727), 164.90 MiB | 1.24 MiB/s, done.
+Resolving deltas: 100% (283588/283588), done.
+Checking connectivity... done.
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ 
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ ls
+grpc
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial$ cd grpc
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ ls
+AUTHORS          CODE-OF-CONDUCT.md  examples           grpc.gyp                Makefile            README.md         test
+bazel            composer.json       Gemfile            gRPC.podspec            MANIFEST.md         requirements.txt  third_party
+BUILD            config.m4           grpc.bzl           gRPC-ProtoRPC.podspec   NOTICE.txt          setup.cfg         tools
+build_config.rb  config.w32          gRPC-Core.podspec  gRPC-RxLibrary.podspec  OWNERS              setup.py          vsprojects
+build.yaml       CONTRIBUTING.md     gRPC-C++.podspec   include                 package.xml         src               WORKSPACE
+cmake            doc                 grpc.def           INSTALL.md              PYTHON-MANIFEST.in  summerofcode
+CMakeLists.txt   etc                 grpc.gemspec       LICENSE                 Rakefile            templates
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ 
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ # Source -- https://grpc.io/docs/tutorials/basic/python.html
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ 
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a1_18/a1____Tensor_Mar18/TensorFlow_Serving/gRPC_Initial/grpc$ 
+#
+
+
+
